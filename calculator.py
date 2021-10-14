@@ -16,7 +16,7 @@ def parse_input():
     >>> 2 ** 3.5
     ['2', '**', '3.5']
     '''
-    fullEq = input("Enter equation: ")
+    fullEq = str(input("Enter equation: "))
     eq = fullEq.split(" ")
     number1 = eq[0]
     number2 = eq[2]
