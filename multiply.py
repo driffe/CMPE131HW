@@ -32,15 +32,18 @@ def check(getElements):
 	'''
 	#loop for getting elements in list
 	for i in range(0, getElements):
-		num = input()
-		#block for testing whether inputs are int or not
 		try:
-			num = int(num)
-			numList.append(num)
-		#block for get out function when input is not int
-		except ValueError:
-			print("This is not number")
-			return False
+			num = input()
+			#block for testing whether inputs are int or not
+			try:
+				num = int(num)
+				numList.append(num)
+			#block for get out function when input is not int
+			except ValueError:
+				print("This is not number")
+				return False
+		except EOFError:
+			print("EOR")
 	return True
 #function for multiplying all elements in list
 def multiply_list(numList):
