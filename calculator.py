@@ -232,5 +232,3 @@ def calculator(number1, number2, operator):
     else:
         return False
     return result
-
-parse_input()

@@ -24,7 +24,7 @@ def multiply_list(numList):
 	result = 1
 	for i in numList:
 		#check when the list have valid elements
-		if(int(i) == i):
+		if(isinstance(i, int)):
 			result = result * i
 		else:
 			return False
