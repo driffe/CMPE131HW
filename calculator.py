@@ -18,7 +18,12 @@ def parse_input():
     '''
     fullEq = input("Enter equation: ")
     eq = fullEq.split(" ")
-    return eq
+    number1 = eq[0]
+    number2 = eq[2]
+    operator = eq[1]
+
+    answer = calculator(number1, number2, operator)
+    print(answer)
 
 def add(number1, number2):
     '''
@@ -228,11 +233,4 @@ def calculator(number1, number2, operator):
         return False
     return result
 
-eq = parse_input()
-
-number1 = eq[0]
-number2 = eq[2]
-operator = eq[1]
-answer = calculator(number1, number2, operator)
-
-print(answer)
+parse_input()
