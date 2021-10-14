@@ -1,7 +1,11 @@
 #empty list
 numList = []
 #get size of list
-getElements = int(input("Enter number of elements: "))
+while True:
+	try:
+		getElements = int(input("Enter number of elements: "))
+	except EOFError:
+		break
 #value of checking for invalid value input
 ch = True
 #result of multiplying the elements in list 
@@ -32,18 +36,15 @@ def check(getElements):
 	'''
 	#loop for getting elements in list
 	for i in range(0, getElements):
+		num = input()
+		#block for testing whether inputs are int or not
 		try:
-			num = input()
-			#block for testing whether inputs are int or not
-			try:
-				num = int(num)
-				numList.append(num)
-			#block for get out function when input is not int
-			except ValueError:
-				print("This is not number")
-				return False
-		except EOFError:
-			print("EOR")
+			num = int(num)
+			numList.append(num)
+		#block for get out function when input is not int
+		except ValueError:
+			print("This is not number")
+			return False
 	return True
 #function for multiplying all elements in list
 def multiply_list(numList):
