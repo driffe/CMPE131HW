@@ -224,6 +224,8 @@ def calculator(number1, number2, operator):
     elif operator == "*":
         result = multiply(number1, number2)
     elif operator == "/":
+        if number2 == 0:
+            return False
         result = divide(number1, number2)
     elif operator == "//":
         result = intDivide(number1, number2)
@@ -232,3 +234,4 @@ def calculator(number1, number2, operator):
     else:
         return False
     return result
+parse_input()
