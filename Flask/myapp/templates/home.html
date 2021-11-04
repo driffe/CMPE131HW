@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome {{ name }}, here are top destinations!</h1>
+<a href="/google">not google</a>
+<br>
+<div>
+    <ul>
+    {% for p in posts %}
+        <li>{{p.city}}</li>
+    {% endfor %}
+</ul>
+</div>
+<div>
+    <form method="POST" novalidate>
+    {{form.hidden_tag()}}
+
+    <p>{{form.cityName.label}} 
+        {{form.cityName(size=32)}}</p>
+    
+    <p>{{form.cityRank.label}} 
+        {{form.cityRank(size=30)}}</p>
+
+    <p>{{form.visited.label}} 
+        {{form.visited()}}</p>
+
+    <p>{{form.submit()}}</p>
+    </form>
+</div>
+
+{% endblock %}
