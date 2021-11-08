@@ -6,8 +6,8 @@
 <br>
 <div>
     <ul>
-    {% for p in posts %}
-        <li>{{p.city}}</li>
+    {% for c in top_city %}
+        <li>{{c.city_name}}</li>
     {% endfor %}
 </ul>
 </div>
@@ -15,14 +15,14 @@
     <form method="POST" novalidate>
     {{form.hidden_tag()}}
 
-    <p>{{form.cityName.label}} 
-        {{form.cityName(size=32)}}</p>
+    <p>{{form.city_name.label}} 
+        {{form.city_name(size=32)}}</p>
     
-    <p>{{form.cityRank.label}} 
-        {{form.cityRank(size=30)}}</p>
+    <p>{{form.city_rank.label}} 
+        {{form.city_rank(size=30)}}</p>
 
-    <p>{{form.visited.label}} 
-        {{form.visited()}}</p>
+    <p>{{form.city_visited.label}} 
+        {{form.city_visited()}}</p>
 
     <p>{{form.submit()}}</p>
     </form>
